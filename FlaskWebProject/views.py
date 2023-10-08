@@ -116,12 +116,10 @@ def _load_cache():
     cache = msal.SerializableTokenCache()
     if 'token_cache' in session:
         cache.deserialize(session['token_cache'])
-    return cache
 
 def _save_cache(cache):
     if cache.has_state_changed:
         session['token_cache'] = cache.serialize()
-    pass
 
 def _build_msal_app(cache=None, authority=None):
     return msal.ConfidentialClientApplication(
