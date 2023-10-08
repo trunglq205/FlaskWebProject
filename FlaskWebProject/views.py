@@ -113,10 +113,9 @@ def logout():
     return redirect(url_for('login'))
 
 def _load_cache():
-    if 'token_cache' in request.session:
-        cache = msal.SerializableTokenCache.deserialize(request.session['token_cache'])
-    else:
-        cache = msal.SerializableTokenCache()
+    cache = msal.SerializableTokenCache()
+    if 'token_cache' in session:
+        cache.deserialize(session['token_cache'])
     return cache
 
 def _save_cache(cache):
