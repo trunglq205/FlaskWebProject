@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'TrunglqWebProject'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6CEAB3ED5891484A85BFA42D7F9FE30F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DAF900CC16184FBAA55BA1636222BC00 }}
